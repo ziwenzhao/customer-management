@@ -1,0 +1,85 @@
+<!--
+  Generated template for the CustomerFilterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar style="text-align:center">
+    <ion-title>客户筛选</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<ion-list >
+  <ion-item>
+    <ion-label class="create-customer-menu">客户编码</ion-label>
+    <ion-select okText="确定" cancelText="取消" multiple="true" [(ngModel)]="selectedCustomerCode">
+      <ion-option *ngFor="let option of customerCodeOptions" [value]="option">{{option || '无'}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label class="create-customer-menu">客户名称</ion-label>
+    <ion-select okText="确定" cancelText="取消" multiple="true" [(ngModel)]="selectedCustomerName">
+      <ion-option *ngFor="let option of customerNameOptions" [value]="option">{{option || '无'}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label class="create-customer-menu">客户状态</ion-label>
+    <ion-select okText="确定" cancelText="取消" multiple="true" [(ngModel)]="selectedCustomerStatus">
+      <ion-option *ngFor="let option of customerStatusOptions" [value]="option">{{option || '无'}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label class="create-customer-menu">客户分级</ion-label>
+    <ion-select okText="确定" cancelText="取消" multiple="true" [(ngModel)]="selectedCustomerType">
+      <ion-option *ngFor="let option of customerTypeOptions" [value]="option">{{option || '无'}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label class="create-customer-menu">客户行业</ion-label>
+    <ion-select okText="确定" cancelText="取消" multiple="true" [(ngModel)]="selectedCustomerIndustry">
+      <ion-option *ngFor="let option of customerIndustryOptions" [value]="option">{{option || '无'}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label class="create-customer-menu">录入开始日期</ion-label>
+    <ion-datetime placeholder="请选择日期" displayFormat="YYYY-MM-DD" pickerFormat="YYYY MMMM DD" cancelText="取消" doneText="完成" [(ngModel)]="selectedStartTime"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label class="create-customer-menu">录入结束日期</ion-label>
+    <ion-datetime placeholder="请选择日期" displayFormat="YYYY-MM-DD" pickerFormat="YYYY MMMM DD" cancelText="取消" doneText="完成" [(ngModel)]="selectedEndTime"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label class="create-customer-menu">归属人</ion-label>
+    <ion-select okText="确定" cancelText="取消" multiple="true" [(ngModel)]="selectedOwnerName">
+      <ion-option *ngFor="let option of customerOwnerNameOptions" [value]="option">{{option || '无'}}</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button  (click)="onRest()">
+          重置
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button  (click)="onCancel()">
+          取消
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button  (click)="onConfirm()">
+          确定
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -1,0 +1,18 @@
+<ion-list radio-group [(ngModel)]="sortOrder" (ngModelChange)="onChange()">
+  <ion-item>
+    <ion-label>名称正序</ion-label>
+    <ion-radio value="nameAscending" ></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>名称倒序</ion-label>
+    <ion-radio value="nameDescending"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>录入时间正序</ion-label>
+    <ion-radio value="createtimeAscending"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>录入时间倒叙</ion-label>
+    <ion-radio value="createtimeDescending"></ion-radio>
+  </ion-item>
+</ion-list>

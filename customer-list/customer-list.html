@@ -1,0 +1,89 @@
+<!--
+  Generated template for the CustomerListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+  <ion-navbar style="text-align:center">
+    <ion-buttons end>
+      <button ion-button (click)="onCreate()">
+        新增
+      </button>
+    </ion-buttons>
+    <ion-title>客户列表</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button clear small navPop style="padding: 0;" class="goBack">
+        <img class="back-btn" src="assets/imgs/work/goBackIcon.png" />
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button class="create-customers" (click)="onCreate()">
+        新增
+      </button>
+    </ion-buttons>
+    <ion-title>客户</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid class="customer-list-filter-menu">
+    <ion-row>
+      <ion-col col-3>
+        <img style='vertical-align:middle;' class="filter-customer" src="assets/imgs/work/filter.png" (click)="onOpenFilter()">
+        <span style="display:inline-block; height:100%; vertical-align:middle;"></span>
+      </ion-col>
+      <ion-col col-3>
+        <img class="sort-customer" src="assets/imgs/work/sort.png" (click)="onSort($event)">
+        <span style="display:inline-block; height:100%; vertical-align:middle;"></span>
+      </ion-col>
+      <ion-col col-3>
+        <img class="search-customer" src="assets/imgs/work/search.png" (click)="onToggleSearch()">
+        <span style="display:inline-block; height:100%; vertical-align:middle;"></span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div *ngIf="search">
+    <ion-grid class="search-cus">
+      <ion-row>
+        <ion-col col-10>
+          <ion-searchbar (change)="onSearchChange($event)" placeholder="搜索"></ion-searchbar>
+        </ion-col>
+        <ion-col col-2>
+          <ion-label (click)="onCancelSearch()" class='customer-list-cancel'>取消</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </div>
+  <div class="total-customers">共{{filteredCustomers.length}}条客户数据</div>
+
+  <ion-list style="margin-top:2px">
+    <ion-item *ngFor="let customer of filteredCustomers" (click)="onEdit(customer)">
+      <ion-grid>
+        <ion-row>
+          <div class="customer-name">{{customer.name}}</div>
+          <div class="customer-rating">
+            <div>{{customer.typename}}</div>
+          </div>
+          <div class="customer-status">
+            <div>{{customer.statusname}}</div>
+          </div>
+        </ion-row>
+        <ion-row class="customer-contact-name">
+          <div>联系人张三test</div>
+          <div>17621448442test</div>
+          <!-- <div class="customer-code">{{customer.code}}</div> -->
+        </ion-row>
+      </ion-grid>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

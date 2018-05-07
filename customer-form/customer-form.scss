@@ -1,0 +1,55 @@
+page-customer-form {
+    .text-input::-webkit-input-placeholder {
+        font-size: 15px;
+        color: #CCCCCC;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+
+    .text-input {
+        margin: 11px 8px 11px 0;
+        padding: 0;
+        width: calc(100% - 8px);
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #282F33;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+
+    ion-select {
+        width: 100%;
+        background: url(../assets/imgs/work/downArrow@2x.png) no-repeat;
+        background-size: 11px 6px;
+        background-position: 90% 50%;
+    }
+
+    .select-icon {
+        display: none;
+    }
+
+    .select-text {
+        font-family: PingFangSC-Regular;
+        font-size: 15px;
+        color: #282F33;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+
+    ion-datetime::-webkit-input-placeholder {
+        font-size: 15px;
+        color: #CCCCCC;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+
+    .button-ios {
+        background: #00AFF4;
+        border-radius: 4px;
+        font-family: PingFangSC-Regular;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        height: 54px;
+    }
+}
